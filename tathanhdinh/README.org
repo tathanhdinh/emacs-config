@@ -7,7 +7,7 @@
 [[img/tathanhdinh.png]]
 
 * Table of Contents                                        :TOC_4_org:noexport:
- - [[Description][Description]]
+ - [[Decsription][Description]]
  - [[Install][Install]]
  - [[Key bindings][Key bindings]]
 

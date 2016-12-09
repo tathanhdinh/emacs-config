@@ -2,7 +2,7 @@
 ;;
 ;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
 ;;
-;; Author: bigraph <bigraph@RobinMilner>
+;; Author: Ta Thanh Dinh <tathanhdinh@pc50.home>
 ;; URL: https://github.com/syl20bnr/spacemacs
 ;;
 ;; This file is not part of GNU Emacs.
@@ -35,12 +35,9 @@
     boogie-friends
     graphviz-dot-mode
     protobuf-mode
-    racket-mode
     llvm-mode
-    julia-mode
-    ebib
-    evil-vimish-fold
-    (prolog :location local)
+    gnuplot
+    cil-mode
     )
   "The list of Lisp packages required by the tathanhdinh layer.
 
@@ -68,6 +65,7 @@ Each entry is either:
 
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
+
 (defun tathanhdinh/init-nasm-mode ()
   (use-package nasm-mode)
   )
@@ -88,30 +86,12 @@ Each entry is either:
   (use-package llvm-mode)
   )
 
-(defun tathanhdinh/init-julia-mode ()
-  (use-package julia-mode)
+(defun tathanhdinh/init-gnuplot ()
+  (use-package gnuplot)
   )
 
-(defun tathanhdinh/init-prolog ()
-  (use-package prolog
-    :init
-    (setq auto-mode-alist (append '(("\\.pl$" . prolog-mode)
-                                    ("\\.m$" . mercury-mode))
-                                  auto-mode-alist))
-    )
+(defun tathanhdinh/init-cil-mode ()
+  (use-package cil-mode)
   )
-
-(defun tathanhdinh/init-racket-mode ()
-  (use-package racket-mode)
-  )
-
-(defun tathanhdinh/init-ebib ()
-  (use-package ebib)
-  )
-
-(defun tathanhdinh/init-evil-vimish-fold ()
-  (use-package evil-vimish-fold)
-  )
-
 
 ;;; packages.el ends here
